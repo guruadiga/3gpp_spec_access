@@ -3,7 +3,7 @@
 # Author : Guru Adiga @ Adiga Software
 # This scripts opens the latest version of a TS (arg_1) of a Release (optional arg_2). Default release is Rel-9.
 # If no TS is found then the TS opens the most appropriate directory in which the user can manualy choose a TS.
-# Gold mining @ 
+# ---
 
 use strict;
 
@@ -11,7 +11,7 @@ my ($ts, $rel) = @ARGV;
 
 $rel = 9 if !$rel;
 
-my $dirname = "C:\\Data\\K-Base\\spec";
+my $dirname = "C:\\specs\\DB\\";
 
 opendir my($dh), $dirname or die "Couldn't open dir '$dirname': $!";
 my @files = sort by_year grep {/(\d+)$/} readdir $dh ;
